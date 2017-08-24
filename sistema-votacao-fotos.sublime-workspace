@@ -1,0 +1,391 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"ta",
+				"target\tAttr"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"fo",
+				"form"
+			],
+			[
+				"M",
+				"ModelForm\tModelForm"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 132.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/paulo/projetos/sistema-votacao-fotos",
+		"/home/paulo/projetos/sistema-votacao-fotos/concurso2016",
+		"/home/paulo/projetos/sistema-votacao-fotos/files",
+		"/home/paulo/projetos/sistema-votacao-fotos/files/templates",
+		"/home/paulo/projetos/sistema-votacao-fotos/votacao"
+	],
+	"file_history":
+	[
+		"/tmp/fz3temp-1/.env",
+		"/tmp/fz3temp-1/ContatoController.php",
+		"/tmp/fz3temp-1/ContatoController 2.php",
+		"/tmp/fz3temp-1/.env 2",
+		"/tmp/fz3temp-1/CurriculoController.php",
+		"/home/paulo/projetos/sistema-votacao-fotos/concurso2016/urls.py",
+		"/home/paulo/projetos/sistema-votacao-fotos/concurso2016/settings.py",
+		"/home/paulo/projetos/sistema-votacao-fotos/files/templates/index.html",
+		"/home/paulo/projetos/sistema-votacao-fotos/votacao/views.py",
+		"/home/paulo/projetos/sistema-votacao-fotos/files/templates/share.html",
+		"/tmp/fz3temp-1/email.php",
+		"/tmp/fz3temp-1/layout_v.php",
+		"/tmp/fz3temp-1/home_base.html",
+		"/tmp/fz3temp-1/index.html",
+		"/home/paulo/projetos/sistema-votacao-fotos/files/templates/voto_ok.html",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/videos.html",
+		"/home/paulo/projetos/spoltieventos/django_project/views.py",
+		"/home/paulo/projetos/spoltieventos/django_project/urls.py",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/inicio.html",
+		"/home/paulo/projetos/spoltieventos/django_project/admin.py",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/base.html",
+		"/home/paulo/projetos/spoltieventos/media/css/default.css",
+		"/home/paulo/projetos/spoltieventos/media/css/pagination.css",
+		"/tmp/fz3temp-1/AdminPedidosController.php",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/admin/videos.html",
+		"/home/paulo/Downloads/digifred.net.br-digifred_6-2017_06_08.sql",
+		"/home/paulo/Downloads/d.sql",
+		"/home/paulo/Downloads/AntigaPaginaCompactar/noticias_viewer.php",
+		"/home/paulo/Downloads/AntigaPaginaCompactar/manager/inc/db.php",
+		"/home/paulo/Downloads/AntigaPaginaCompactar/noticias.php",
+		"/home/paulo/Downloads/AntigaPaginaCompactar/index.php",
+		"/home/paulo/Downloads/AntigaPaginaCompactar/header.php",
+		"/tmp/fz3temp-1/wp-config.php",
+		"/tmp/fz3temp-1/index.php",
+		"/tmp/fz3temp-1/index.htm",
+		"/home/paulo/Downloads/ajsoares.csv",
+		"/home/paulo/Downloads/mob (1)/index.html",
+		"/home/paulo/Downloads/mob/index.html",
+		"/home/paulo/projetos/spoltieventos/django_project/models.py",
+		"/home/paulo/Área de Trabalho/bb.txt",
+		"/home/paulo/Downloads/cometchat/integration.php",
+		"/tmp/fz3temp-1/integration.php",
+		"/tmp/fz3temp-1/cometchat_shared.php",
+		"/tmp/fz3temp-1/config.php",
+		"/tmp/fz3temp-1/welcome.blade.php",
+		"/home/paulo/projetos/spoltieventos/media/js/grid2.js",
+		"/home/paulo/projetos/spoltieventos/media/js/grid.js",
+		"/tmp/fz3temp-1/inicio.html",
+		"/tmp/fz3temp-1/settings.py",
+		"/tmp/fz3temp-1/urls.py",
+		"/home/paulo/projetos/spoltieventos/django_project/settings.py",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/categoria.html",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/campanha.html",
+		"/tmp/fz3temp-1/view_layout_base.php",
+		"/tmp/fz3temp-1/layout_base.php",
+		"/home/paulo/Downloads/layout-spolti (1)/campanha.html",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/depoimento.html",
+		"/tmp/fz3temp-1/nginx.conf.sample",
+		"/tmp/fz3temp-1/dluxojoias",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/categorias.html",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/fotos.html",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/subcategoria.html",
+		"/home/paulo/Downloads/download",
+		"/home/paulo/Área de Trabalho/PLANO DE AULA 2017-1.docx_FILES/word/document.xml",
+		"/home/paulo/Área de Trabalho/PLANO DE AULA 2017-1.docx_FILES/customXml/item1.xml",
+		"/home/paulo/Área de Trabalho/PLANO DE AULA 2017-1.docx_FILES/[Content_Types].xml",
+		"/home/paulo/Área de Trabalho/PLANO DE AULA 2017-1.docx_FILES/word/_rels/document.xml.rels",
+		"/home/paulo/Área de Trabalho/a.xml",
+		"/media/paulo/10CF-89ED/PLANO DE AULA 2017-1.docx",
+		"/home/paulo/projetos/agenciaholy/agenciaholy/settings.py",
+		"/home/paulo/projetos/spoltieventos/django_project/templates/base_.html",
+		"/home/paulo/projetos/spoltieventos/.gitignore",
+		"/tmp/fz3temp-1/index.html.bak",
+		"/media/paulo/E838-E049/Drive/792/niiecguad.js",
+		"/media/paulo/E838-E049/AUTORUN.INF",
+		"/tmp/fz3temp-1/relatorio.blade.php",
+		"/tmp/fz3temp-1/routes.php",
+		"/home/paulo/projetos/spoltieventos/media/css/principal.css",
+		"/tmp/fz3temp-1/principal.css",
+		"/home/paulo/Downloads/ITEM.csv",
+		"/home/paulo/Downloads/CLIENTES.csv",
+		"/tmp/fz3temp-1/bossoni.sql",
+		"/home/paulo/Downloads/BF1AD946AFD4485921C9F374BAD112CA.txt",
+		"/tmp/fz3temp-1/installed.json",
+		"/home/paulo/Área de Trabalho/spolti.txt",
+		"/var/www/html/unoparfw/website/unopar/resources/views/admin/noticias/noticias/edit.blade.php",
+		"/var/www/html/unoparfw/website/unopar/resources/views/index.blade.php",
+		"/var/www/html/unoparfw/website/unopar/resources/views/admin/noticias/noticias/noticia.blade.php",
+		"/var/www/html/unoparfw/website/unopar/app/Http/Controllers/CursosController.php",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/www/js/controllers.js",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/www/js/app.js",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/www/templates/curso.html",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/config.xml",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/platforms/android/AndroidManifest.xml",
+		"/var/www/html/unoparfw/website/unopar/app/Http/Controllers/admin/AdminCursosController.php",
+		"/var/www/html/unoparfw/website/unopar/app/Http/Controllers/NoticiasController.php",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/www/templates/noticias.html",
+		"/var/www/html/unoparfw/website/unopar/app/Http/Controllers/admin/AdminNoticiasController.php",
+		"/var/www/html/unoparfw/website/unopar/app/noticias.php",
+		"/var/www/html/unoparfw/website/unopar/database/migrations/2016_12_19_131559_add_curso_to_noticias_table.php",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/www/index.html",
+		"/var/www/html/unoparfw/unopar-frederico-westphalen-mobile/www/templates/noticia.html",
+		"/home/paulo/Área de Trabalho/index.html",
+		"/tmp/fz3temp-1/HomeController.php",
+		"/tmp/fz3temp-1/banner.blade.php",
+		"/home/paulo/projetos/advanceweb/sistema-pedidos/app/Http/Controllers/Admin/AuthenticateController.php",
+		"/home/paulo/projetos/advanceweb/sistema-pedidos/app/Categoria_produtos.php",
+		"/home/paulo/projetos/advanceweb/sistema-pedidos/app/Pedidos.php",
+		"/var/www/html/unoparfw/website/unopar/resources/views/base.blade.php",
+		"/var/www/html/unoparfw/website/unopar/resources/views/detalhes_noticia.blade.php",
+		"/var/www/html/unoparfw/website/unopar/public/assets/css/style.css",
+		"/home/paulo/Downloads/cisco",
+		"/tmp/fz3temp-1/detalhes_noticia.blade.php",
+		"/tmp/fz3temp-1/publicidade.blade.php",
+		"/tmp/fz3temp-1/materia.blade.php",
+		"/tmp/fz3temp-1/base.blade.php",
+		"/tmp/fz3temp-1/header.blade.php",
+		"/var/www/html/unoparfw/website/unopar/.env",
+		"/tmp/fz3temp-1/home.blade.php",
+		"/var/www/html/unoparfw/unopar/public/assets/js/jcarousel.responsive.js",
+		"/var/www/html/unoparfw/unopar/resources/views/base.blade.php",
+		"/var/www/html/unoparfw/unopar/resources/views/index.blade.php",
+		"/var/www/html/unoparfw/unopar/config/mail.php",
+		"/var/www/html/unoparfw/unopar/app/User.php",
+		"/var/www/html/unoparfw/unopar/app/Http/routes.php",
+		"/var/www/html/unoparfw/unopar/app/Http/Controllers/admin/AdminNoticiasController.php",
+		"/var/www/html/unoparfw/unopar/app/Http/Controllers/NoticiasController.php",
+		"/var/www/html/unoparfw/unopar/resources/views/contato.blade.php"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/home/paulo/projetos/sistema-votacao-fotos"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"method=\"POST\"",
+			"mwthod=\"POST\"",
+			"/var/python-apps/concurso2016",
+			"users",
+			"page_obj",
+			"btn",
+			"Add contact",
+			"ind.br",
+			"net.br",
+			"agenciaholy.com",
+			".com.br",
+			"$row1",
+			"MEMC",
+			"DEV_MODE",
+			"dev",
+			"Grid",
+			"visi",
+			"img/",
+			"img",
+			"18",
+			"paulo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"videos",
+			"",
+			"i",
+			"ind.br,",
+			"net.br,",
+			"bet.br,",
+			"agenciaholy.com,",
+			".com.br,"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sistema-votacao-fotos.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projetos/spoltieventos/spoltieventos.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 261.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

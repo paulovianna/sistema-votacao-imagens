@@ -1,0 +1,5 @@
+Olá FERNANDA BURIOL,
+ 
+Estou encaminhando em anexo os fontes da aplicação. Foi desenvolvido utilizando Django. Segue também um exemplo utilizando os nossos sites institucionais. A progep fez algo semelhante para a semana do servidor no ano passado. Vocês poderiam utilizar o site de frederico (ufsm.br/frederico) e fazer algo semelhante a isso: http://padrao.200.132.39.73.nip.io/index.php/pt-br/extra
+
+Att, Fernando Meneghetti

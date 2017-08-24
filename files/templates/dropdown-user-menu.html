@@ -1,0 +1,44 @@
+
+<div  class='pull-right user-dropdorwn-menu' style='{% if not small_bar %} color:white; {% else %} color:#004b82; {% endif %} {% if margin_top %} margin-top: {{ margin_top }}; {% endif %} ' >
+    
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown"  title='Menu do usuário'> <i class='icon-user'></i> {{ user.first_name|title|truncatewords:1 }} <span class="caret"></span></button> 
+          <ul class="dropdown-menu pull-right user-dropdorwn-menu" role='menu'>
+
+            {% if user.is_staff %}
+                <li class=''></li>
+                <li class=''> <a  href="{% url 'maiar.tasks.views.staff_index' 'all' 'auto_tasks' 1 %}"> <i  class='icon-tasks'></i> Atendimento </a>  </li>
+                <li class=''> <a  href="{% url 'maiar.services.views.services' %}"> <i class='icon-cogs'></i> Meus serviços (Configurar)</a> <li>
+                <li class="divider"></li>
+            {% endif %}
+
+            <li class=''> <a style='' href="{% url "tasks.views.customer_index"  "open"  %}"> <i class='icon-home'></i> Home </a>  </li>
+            <li class='disabled' title='Ainda não disponível'> <a  href="#"> <i class='icon-key'></i> Trocar senha</a>  </li>
+            
+            
+
+
+          
+            {% if user.is_superuser %}
+                <li class="divider"></li>
+
+                <li class="dropdown-submenu pull-left">
+                    <a tabindex="-1" href="#"> <i class='icon-wrench'></i>  Avançado</a>
+                    <ul class="dropdown-menu " style='width:250px;'>
+                        <li class='disabled'> <a tabindex="-1" href="#"  title='Não implementado'> <i class='icon-asterisk'></i>  Organização</a>  </li>
+                        <li class='disabled'> <a tabindex="-1" href="#"  title='Não implementado'> <i class='icon-group'></i>  Usuários</a>  </li>
+                        <li class='disabled'> <a tabindex="-1" href="#"  title='Não implementado'> <i class='icon-keyboard '></i> Aplicações</a>  </li>
+                        <li> <a  href="{% url 'admin:index' %}" > <i class='icon-cog'></i> Django admin</a>  </li>      
+                    </ul>
+                  </li>
+                <li class="divider"></li>
+                
+
+                
+            {% endif %}
+
+            <li class=''> <a  href="{% url "logout" %}"> <i class='icon-off'></i> sair</a>  </li>
+          
+          </ul>
+    </div>
+</div>

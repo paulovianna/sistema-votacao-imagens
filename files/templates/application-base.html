@@ -1,0 +1,144 @@
+{% extends 'general-base.html' %}
+{% load staticfiles %}
+
+
+    
+{% block app-base-css %}
+    <style type="text/css">
+        .first-band {
+            background: url('{% static "theme/6559334541_a69433379d_o-3.jpg" %}') top center  repeat-x;
+        }
+
+        .band {
+
+            background-color:white;
+            opacity:0.85;
+            -moz-opacity: 0.85;
+            filter: alpha(opacity=85); 
+            padding-top: 10px; 
+            padding-bottom: 10px;
+            
+        }
+
+        .transparent{
+            opacity:0.92;
+            -moz-opacity: 0.92;
+            filter: alpha(opacity=92); 
+        }
+
+    </style>
+
+{% endblock %}
+
+
+
+{% block app-container %}
+        <div class='first-band'>
+            <div class='band'>
+                <div class="container{{ fluid }}" >            
+                    <div class='row{{ fluid }}'>
+                        <div class='span12'  style='height:20px;'>
+
+                            <a href="{% url "index" %}">
+                                <img  class='pull-left' src="{% static "theme/ufsm/color_200x200-tansparente.png" %}" style='height:25px;'>
+                                <img  class='pull-left' src="{% static "theme/ufsm/cpd.png" %}" style='height:25px;'>
+                            </a>
+                           
+
+                            {% if small_bar %}
+                                
+                                
+                                 {% include "dropdown-user-menu.html" with user=user mensage=title %}
+                                
+                            {% else %}
+                                <h1 class='pull-right ' style='font-size:12px; margin-top:-10px;'>Central de Serviços CPD</h1>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container{{ fluid }}">
+                {% if small_bar %} 
+
+                {% else %}
+                <div class='row{{ fluid }}'>
+                    <div class='span12' style='padding-top:15px;'>
+                    	
+                        <div >
+                            <h2 style='margin-top:-5px; color:white;'>{% if icon_awesome %}<i class='{{  icon_awesome }}'></i>{% endif %} {{ title|safe }} </h2>
+                        </div>
+
+                        <div class='btn-group pull-left' style='margin-right:10px;'>
+                        {% if  back_url %}
+                            <a href='{{ back_url }}' class='btn ' > <i class='icon-chevron-sign-left'></i> voltar </a>
+                        {% endif %}
+
+                    	{% if home_button %}
+                            {% if user.is_authenticated %}
+                        	<a href='{% url "tasks.views.customer_index" "open" %} ' class='btn'> <i class='icon-home'></i> Home </a>
+                            {% endif %}
+                        {% endif %}
+                        {% if services_button %}
+                            <a href='{% url "tasks.views.customer_select_service" %} ' class='btn'> <i class='icon-book'></i> Serviços </a>
+                        {% endif %}
+                        </div>
+
+
+                        <div class='btn-group hidden-phone hidden-tablet' style='margin-right:10px;'>
+                        {% for ui_action in ui_actions %}
+                        	<a href='{{  ui_action.url }} ' class='{{ ui_action.css_classes }}'> 
+                        		{% if ui_action.icon_awesome %}<i class='{{  ui_action.icon_awesome }}'></i>{% endif %} {{  ui_action.name }} 
+                        	</a>
+                        	
+                        {% endfor %}
+                        </div>
+
+                        {% if ui_actions %}
+                        <div class="btn-group hidden-desktop pull-left" >
+			              <button class="btn dropdown-toggle" data-toggle="dropdown">Ações <span class="caret"></span></button> 
+                          <ul class="dropdown-menu pull-left">
+                          	{% for ui_action in ui_actions %}
+                          	<li class=''>
+                              	<a href='{{  ui_action.url }} ' > 
+	                        		{% if ui_action.icon_awesome %}<i class='{{  ui_action.icon_awesome }}'></i>{% endif %} {{  ui_action.name }} 
+	                        	</a>
+                             </li>
+                             {% endfor %}
+                        	</ul>
+                    	</div>
+                    	{% endif %}
+						
+                        
+
+                        {% if user.is_authenticated %}
+                        
+                            <div class='pull-right' style=''>                            
+    
+                            {% include "dropdown-user-menu.html" with user=user mensage="Bem vindo:" %}
+                            </div>
+                        {% endif %}
+
+					
+
+                    </div>
+
+
+                    <div class='span12 pull-left' style='clear:both;'>
+                        <a href='http://www.flickr.com/photos/nasa_goddard/6559334541/' style='color:#ccc; font-size:11px;' target='__blank'> Background sob Creative Commons </a></div>
+                     </div>
+                {% endif %}
+
+            </div>    
+        </div>
+
+        {% block pg-container %}
+
+
+        {% endblock %}
+
+
+
+
+
+{% endblock %}

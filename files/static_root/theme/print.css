@@ -1,0 +1,79 @@
+.navbar{
+    visibility:hidden;
+}
+
+.container-fluid{
+    margin-top: -85px;
+}
+
+.btn{
+    display:none;
+}
+
+.navbar {
+    display: none;
+}
+
+body {
+  padding-top:0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	line-height: 13px;
+	color: #444;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h1 small {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+h2 small {
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h3 small {
+  font-size: 11px;
+}
+
+table{
+	font-size: 11px;
+}
+
+hr{
+	display: none;
+}
+
+#footer{
+	display: none;
+}
+
+
+.table th, .table td {
+line-height: 14px;
+text-align: left;
+}
+
+td.col1 { width: 250px; color: blue; }
+
+.not_print{
+	display: none;
+}
+
+.print{
+  margin-top: 30px;
+	width:100%;
+}

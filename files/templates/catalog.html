@@ -1,0 +1,66 @@
+
+<div class="container"  style='padding-top:10px;'>
+      
+    <div class='row'>
+        {% for super_category in super_categories %}
+
+
+            {% if super_category.active %}
+            <div class='span{% if forloop.counter|divisibleby:2 %}4{% else %}8{% endif %}'>
+                <div class='row' >
+                    <div class='span{% if forloop.counter|divisibleby:2 %}4{% else %}8{% endif %}' >
+                        <h2 style="{% if category.color_code %} color:{{ category.color_code }}; {% endif %} line-height:24px;" > {{ super_category.name }} 
+                        {% if super_category.small_description %}
+                        <br><small style='font-size:16px;' > {{ super_category.small_description }} </small>
+                        {% endif %}
+                        </h2>
+                        {% if super_category.name %}
+                        <hr>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class='row'>
+                {% for  category in super_category.category_set.all %}
+                    <div class='span4' style=''>
+
+                        {% if category.show_name %}
+                            <h3 style='margin-top:-10px; {% if category.color_code %} color:{{ category.color_code }}; {% endif %}'>
+                                {% if category.icon %}<img  style='width:28px;' src="{{ MEDIA_URL }}{{ category.icon }}" alt='icone ilustrativa'>{% endif %} {{ category.name }}</h3>
+                        {% endif %}
+
+                        {% if category.show_name %}
+                            <div style='line-height:180%;' >            
+                        {% else %}
+                            <div style='line-height:225%;' >
+                        {% endif %}
+                                {% for service in category.service_set.all %}
+                                    {% if service.active %}
+                                            {% if service.short_description %}
+                                                <a class='tip' data-toggle='tooltip' data-placement='top' data-original-title='<div style="font-size:14px;">{{ service.short_description|safe }}</div>' data-html='true' href='{% url "tasks.views.customer_task" service.url_name %}' >
+                                                  {% if service.icon %}
+                                                        <img src="{{ MEDIA_URL }}{{ service.icon }}" style='width:24px;'>
+                                                  {% endif %}
+                                                  {{ service.name }}. </a> 
+                                            {% else %}
+                                                <a href='{% url "tasks.views.customer_task" service.url_name %}' > 
+                                                {% if service.icon %}
+                                                        <img src="{{ MEDIA_URL }}{{ service.icon }}" style='width:24px;'>
+                                                  {% endif %}
+                                                   {{ service.name }}. </a> 
+                                            {% endif %}
+                                        <br>  
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        <hr>
+                    </div>
+                
+                {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+        {% endfor %}
+    </div>
+</div>

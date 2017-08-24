@@ -1,0 +1,29 @@
+
+
+<div  class='pull-right dropdorwn-main-menu' style='{% if not small_bar %} color:white; {% else %} color:#004b82; {% endif %} {% if margin_top %} margin-top: {{ margin_top }}; {% endif %} ' >
+    <b class='hidden-phone'> &nbsp; {{ mensage|safe }}</b> 
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown"  title='Menu principal'> <i class='icon-reorder '></i>  <span class="caret"></span></button> 
+          <ul class="dropdown-menu pull-right dropdorwn-main-menu">
+
+            {% if user.is_staff %}
+                <li class=''></li>
+                <li class=''> <a  href="{% url 'maiar.tasks.views.staff_index' 'all' 'auto_tasks' 1 %}"> <i  class='icon-tasks'></i> Atendimento </a>  </li>
+                <li class=''> <a  href="{% url 'maiar.services.views.services' %}"> <i class='icon-cogs'></i> Gerenciar serviços (Catálogo)</a> <li>
+
+                
+              
+            {% endif %}
+
+          
+            {% if user.is_superuser %}
+            <li class="divider"></li>
+            <li class='disabled'> <a  href="#"  title='Não implementado'> <i class='icon-asterisk'></i>  Organização</a>  </li>
+
+            <li class='disabled'> <a  href="#"  title='Não implementado'> <i class='icon-group'></i>  Usuários</a>  </li>
+            <li class='disabled'> <a  href="#"  title='Não implementado'> <i class='icon-keyboard '></i> Aplicações</a>  </li>
+            <li> <a  href="{% url 'admin:index' %}" > <i class='icon-cog'></i> Django admin</a>  </li>
+            {% endif %}
+          </ul>
+    </div>
+</div>

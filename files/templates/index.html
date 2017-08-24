@@ -1,0 +1,163 @@
+{% extends 'general-base.html' %}
+{% load staticfiles %}
+
+{% block app-base-js %}
+ <script src="{% static "theme/bsl/js/load-image.js" %}"></script>
+ <script src="{% static "theme/bsl/js/bootstrap-image-gallery.js" %}"></script>
+{% endblock %}
+
+{% block pg-css %}
+    <style type="text/css">
+        .first-band {
+            background: url('{% static "theme/6559334541_a69433379d_o-3.jpg" %}') top center repeat-x;
+        }
+
+        .band {
+
+            background-color:white;
+            opacity:0.85;
+            -moz-opacity: 0.85;
+            filter: alpha(opacity=85); 
+            padding-top: 10px; 
+            padding-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .transparent{
+            opacity:0.92;
+            -moz-opacity: 0.92;
+            filter: alpha(opacity=92); 
+        }
+
+    </style>
+	
+	<link rel="stylesheet" href="{% static "theme/bsl/css/bootstrap-image-gallery.css" %}" />
+
+{% endblock %}
+
+
+{% block app-container %}
+        <div class='first-band'>
+            <div class='band'>
+                <div class="container" >            
+                    <div class='row' >
+                        <div class='span2'>
+
+                            <div class='visible-phone'>
+                                <img src="{% static "theme/ufsm/logo.png" %}" style='height:45px;'>
+                            </div>
+
+                            <div class='hidden-phone'>
+                                <a href='http://www.ufsm.br' style='text-decoration: none;'><img src="{% static "theme/ufsm/logo.png" %}" ></a>
+                            </div>
+                        </div>
+                        <div class='span6 offset4'>
+                        
+                            <div class='visible-phone'>
+                                <h1 class='pull-left'  style='font-size:22px;'>Concurso de Desenhos</h1>
+                            </div>
+                            <div class='hidden-phone'>
+                                <h1 class='pull-right'>Concurso de Desenhos</h1>
+                                <h4 class='pull-right'>Tema: Lugar onde Vivo - Educação.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="span12 well" style="text-align:justify;">
+                    		<p>O Concurso de Desenhos, com o tema Lugar onde Vivo – Educação, trata-se de uma parceria entre a UFSM Campus Frederico Westphalen e a Secretaria Municipal de Educação e Cultura (SMEC) de Frederico Westphalen e resultará na produção de um calendário com desenhos de alunos das escolas municipais. Os alunos participantes, após visitarem a UFSM-FW para servir de inspiração, criaram em suas aulas desenhos sobre a temática proposta, os quais passaram pela seleção dos professores, chegando a essa votação o número de 42 desenhos. Os 12 desenhos mais votados receberão um prêmio simbólico e irão compor o calendário Institucional da UFSM 2018.</p>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+
+		</div>  
+
+		
+	<div class='container' style='margin-top: 10px;'>
+		<div id="modal-gallery1" class="modal modal-gallery hide fade" tabindex="-1">
+		<div class="modal-header">
+				<a class="close" data-dismiss="modal">&times;</a>
+				<h3 class="modal-title"></h3>
+			</div>
+			<div class="modal-body"><div class="modal-image"></div></div>
+			
+
+			<div class="modal-footer">
+				<form id="votaform1" action="{% url 'votar' %}" style='margin: 0px;' method="post">
+					{% csrf_token %}
+					RG: <input required style='margin-top: 10px;' id="id_usuario" maxlength="15" name="usuario" type="text" />
+					<input name="categoria" type="hidden" value="" class="modal-categoria" />
+					<input name="voto" type="hidden" value="" class="modal-id" />
+					<button class="btn" type='submit' target="_blank"><i class="icon-ok"></i> Votar</button>
+				</form>
+			</div>
+		</div>
+
+		<div class='row well'>
+			<h2>Frederico Westphalen</h2>
+			<hr/>
+			<div class="container" data-toggle="modal-gallery" data-target="#modal-gallery1">
+				<div class='row'>
+				{% load thumbnail %}
+				
+				{% for foto in fotos1 %}
+				
+					
+				<div class='span2' style='margin-bottom: 10px;'>
+						<a title="{{foto}}" data-categoria="{{ foto.categoria.id }}" data-id="{{ foto.id }}" href="{{foto.foto|thumbnail_url:'show'}}" data-gallery="gallery">
+							<img src="{{ foto.foto|thumbnail_url:'mini' }}" alt="" class="img-polaroid img-rounded"/>
+						</a>
+					</div>
+				
+				{% endfor %}
+				
+			
+				</div>
+			</div>
+		</div>
+		
+		<div id="modal-gallery2" class="modal modal-gallery hide fade" tabindex="-1">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">&times;</a>
+				<h3 class="modal-title"></h3>
+			</div>
+			<div class="modal-body"><div class="modal-image"></div></div> 
+			
+
+			<div class="modal-footer"><form id="votaform2" action="{% url 'votar' %}" style='margin: 0px;' method="post">
+					{% csrf_token %}
+					RG: <input required style='margin-top: 10px;' id="id_usuario" maxlength="15" name="usuario" type="text" />
+					<input name="categoria" type="hidden" value="" class="modal-categoria" />
+					<input name="voto" type="hidden" value="" class="modal-id" />
+					<button class="btn" type='submit' target="_blank"><i class="icon-ok"></i> Votar</button>
+				</form>
+			</div>
+		</div>
+           
+	</div>
+
+	
+<script>
+	var sbt = function(event){
+		event.preventDefault();
+		var $form = $(this),
+		categoria = $form.find(".modal-categoria").val(),
+		id = $form.find(".modal-id").val(),
+		csrf = $form.find("input[name='csrfmiddlewaretoken']").val(),
+		usuario = $form.find("input[name='usuario']").val(),
+		url = $form.attr( "action" );
+		
+		var posting = $.post( url, { 'categoria': categoria, 'voto': id, 'csrfmiddlewaretoken': csrf, 'usuario': usuario });
+		
+		posting.done(function(data){
+			
+			
+			alert(data);
+			
+		});
+	};
+		
+	$("#votaform2").submit(sbt);
+	$("#votaform1").submit(sbt);
+</script>
+{% endblock %}

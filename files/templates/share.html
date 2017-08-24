@@ -1,0 +1,118 @@
+{% extends 'general-base.html' %}
+{% load staticfiles %}
+{% load thumbnail %}
+
+{% block app-base-js %}
+ <script src="{% static "theme/bsl/js/load-image.js" %}"></script>
+ <script src="{% static "theme/bsl/js/bootstrap-image-gallery.js" %}"></script>
+{% endblock %}
+
+
+{% block descpt %} {{ foto }}{%endblock%}
+{%block thumb %}http://200.18.45.30/{{foto.foto|thumbnail_url:'show'}}{% endblock %}
+{% block url %}compartilhar/{{foto.id}}{%endblock%}	
+		
+{% block pg-css %}
+    <style type="text/css">
+        .first-band {
+            background: url('{% static "theme/6559334541_a69433379d_o-3.jpg" %}') top center repeat-x;
+        }
+
+        .band {
+
+            background-color:white;
+            opacity:0.85;
+            -moz-opacity: 0.85;
+            filter: alpha(opacity=85); 
+            padding-top: 10px; 
+            padding-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .transparent{
+            opacity:0.92;
+            -moz-opacity: 0.92;
+            filter: alpha(opacity=92); 
+        }
+
+    </style>
+	
+	<link rel="stylesheet" href="{% static "theme/bsl/css/bootstrap-image-gallery.css" %}" />
+
+{% endblock %}
+
+
+{% block app-container %}
+        <div class='first-band'>
+            <div class='band'>
+                <div class="container" >            
+                    <div class='row' >
+                        <div class='span2'>
+
+                            <div class='visible-phone'>
+                                <img src="{% static "theme/ufsm/color_200x200-tansparente.png" %}" style='height:45px;'>
+                            </div>
+
+                            <div class='hidden-phone'>
+                                <img src="{% static "theme/ufsm/color_200x200-tansparente.png" %}" style='height:60px;'>
+                            </div>
+                        </div>
+                        <div class='span10'>
+                        
+                            <div class='visible-phone'>
+                                <h1 class='pull-left'  style='font-size:22px;'>Mostra Fotográfica: Seu Olhar na Nossa História</h1>
+                            </div>
+                            <div class='hidden-phone'>
+                                <h1 class='pull-right'>Mostra Fotográfica: Seu Olhar na Nossa História</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>  
+
+	
+
+
+	<div class='container' style='margin-top: 10px;'>
+		<div class='row well'>
+			<h2>{{ foto }}</h2>
+			<hr/>
+			<img src="{{ foto.foto|thumbnail_url:'show' }}" alt="" class="img-polaroid img-rounded"/>
+
+			
+			
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=181730795265478";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="g-plusone" data-size="small"></div>
+
+<div class="fb-like" data-href="{{ request.url }}"  data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="true"></div>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-hashtags="ufsm">Tweetar</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<script type="text/javascript">
+  window.___gcfg = {lang: 'pt-BR'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+           
+	</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'application-base.html' %}
+{% load staticfiles %}
+
+    
+{% block app-base-css %}
+{% endblock %}
+
+{% block pg-css %}
+    <style type="text/css">
+        .first-band {
+            background: url('{% static "theme/6559334541_a69433379d_o-3.jpg" %}') top center repeat-x;
+            
+        }
+
+        .band {
+
+            padding-top: 10px; 
+            padding-bottom: 10px;
+            background-color:rgba(255,255,255,0.8);
+        }
+    
+
+    </style -->
+
+{% endblock %}
+
+
+
+{% block pg-container %}
+            <div class="container{{ fluid }}">
+                <div class='row{{ fluid }}' style='margin-top:5px;'>
+                    <div class='span12'>
+                        {% block staff-controls  %}
+                        
+                        {% endblock %}
+
+                    </div>
+                </div>
+
+            {% block staff-content %}
+                
+            {% endblock %}
+
+            </div>
+
+
+{% endblock %}

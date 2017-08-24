@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+
+{% block app-container %}
+
+        <div class='first-band'>
+            <div class='band'>
+                <div class="container" >       
+                    <div class='row{{ fluid }}'>
+                        <div class='span12'  style='height:20px;'>
+
+                            <a href="{% url "index" %}">
+                                <img  class='pull-left' src="{% static "theme/ufsm/color_200x200-tansparente.png" %}" style='height:25px;'>
+                                <img  class='pull-left' src="{% static "theme/ufsm/cpd.png" %}" style='height:25px;'>
+                            </a>
+                           
+                            {% if small_bar %}
+                                 {% include "user-dropdown-menu.html" with user=user mensage=title %}
+                            {% else %}
+                                <h1 class='pull-right ' style='font-size:12px; margin-top:-10px;'>Central de Serviços CPD</h1>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style='height:400px;'>
+
+                <br>                
+                <br>
+                   <span style='font-size:110px; color:#a94242; text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;'><i class='icon-ban-circle'></i> </span>
+                <h1 style='color:white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;'> Você não possui permissão de acesso a esta página! </h1>
+                
+                <br>
+                <br>
+                <br>
+                    
+                <div class='row' style='margin-top:150px;'>
+                    <div class='span12 pull-left' style='clear:both;'>
+                        <a href='http://www.flickr.com/photos/nasa_goddard/6559334541/' style='color:#ccc; font-size:11px;' target='__blank'> Background sob Creative Commons </a></div>
+                 </div>
+            </div>
+        </div>
+
+
+{% endblock %}

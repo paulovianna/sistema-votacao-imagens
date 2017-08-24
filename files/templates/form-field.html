@@ -1,0 +1,14 @@
+
+
+<label >
+    {% if field.field.required ==  True %}
+        <b>{{ field.label }}:</b>
+    {% else %}
+        {{ field.label }}:
+    {% endif %}
+</label>
+{% for erro in field.errors %}
+    <span class="label label-important">{{erro}}</span>
+{% endfor %}    
+
+{{ field }}
