@@ -42,7 +42,7 @@ class VotaForm(forms.ModelForm):
         model = VotoCPF
 
 def exibe_fotos(request):
-    fotos1 = Foto.objects.filter(categoria=1).order_by('?')
+    fotos1 = Foto.objects.filter(categoria=1).order_by('autor')
     #fotos2 = Foto.objects.filter(categoria=2).order_by('?')
 
     return render_to_response("index.html", {'fotos1': fotos1}, context_instance=RequestContext(request))
