@@ -86,13 +86,13 @@
 			
 
 			<div class="modal-footer">
-				<form id="votaform1" action="{% url 'votar' %}" style='margin: 0px;' method="post">
+				<!--<form id="votaform1" action="{% url 'votar' %}" style='margin: 0px;' method="post">
 					{% csrf_token %}
 					RG: <input required style='margin-top: 10px;' id="id_usuario" maxlength="15" name="usuario" type="text" />
 					<input name="categoria" type="hidden" value="" class="modal-categoria" />
 					<input name="voto" type="hidden" value="" class="modal-id" />
 					<button class="btn" type='submit' target="_blank"><i class="icon-ok"></i> Votar</button>
-				</form>
+				</form>-->
 			</div>
 		</div>
 
@@ -127,13 +127,14 @@
 			<div class="modal-body"><div class="modal-image"></div></div> 
 			
 
-			<div class="modal-footer"><form id="votaform2" action="{% url 'votar' %}" style='margin: 0px;' method="post">
+			<div class="modal-footer">
+				<!--<form id="votaform2" action="{% url 'votar' %}" style='margin: 0px;' method="post">
 					{% csrf_token %}
 					RG: <input required style='margin-top: 10px;' id="id_usuario" maxlength="15" name="usuario" type="text" />
 					<input name="categoria" type="hidden" value="" class="modal-categoria" />
 					<input name="voto" type="hidden" value="" class="modal-id" />
 					<button class="btn" type='submit' target="_blank"><i class="icon-ok"></i> Votar</button>
-				</form>
+				</form>-->
 			</div>
 		</div>
            
